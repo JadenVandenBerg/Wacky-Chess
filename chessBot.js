@@ -1,3 +1,5 @@
+
+// Unfinished
 let whiteMoves = {
 }
 let blackMoves = {
