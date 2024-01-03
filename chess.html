@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Chess</title>
+  <link rel="icon" type="image/x-icon" href="img/favicon.png">
+  <link href="chessStyle.css" rel="stylesheet" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body>
+  <div id='container'>
+    <div id='menuBar'>
+      <h1 class="title">Wacky <span style="color: lightgreen;">Chess</span></h1>
+      <!--<h1 class="title">Chess</h1>-->
+      <button id='playBtn'>Play</button><br>
+      <button id='randomBtn'>Random</button><br>
+      <button onclick='window.location="puzzles.html";' id='puzzleBtn'>Puzzles</button><br>
+      <button onclick='window.location="login.php";' id='loginBtn'>Login</button><br>
+      <button onclick='window.location="signup.php";' id='signinBtn'>Sign Up</button><br>
+      <table id='expandPieceStack'></table>
+    </div>
+    <table id='board'>
+      <tr class='tableRow'>
+        <td id='a1' data-startsquare='' class='td'></td>
+        <td id='a2' data-startsquare='' class='td'></td>
+        <td id='a3' data-startsquare='' class='td'></td>
+        <td id='a4' data-startsquare='' class='td'></td>
+        <td id='a5' data-startsquare='' class='td'></td>
+        <td id='a6'data-startsquare=''  class='td'></td>
+        <td id='a7' data-startsquare='' class='td'></td>
+        <td id='a8' data-startsquare='' class='td'></td>
+      </tr>
+      <tr class='tableRow'>
+        <td id='b1'data-startsquare=''  class='td'></td>
+        <td id='b2' data-startsquare='' class='td'></td>
+        <td id='b3'data-startsquare='' class='td'></td>
+        <td id='b4'data-startsquare=''  class='td'></td>
+        <td id='b5' data-startsquare='' class='td'></td>
+        <td id='b6' data-startsquare='' class='td'></td>
+        <td id='b7' data-startsquare='' class='td'></td>
+        <td id='b8' data-startsquare='' class='td'></td>
+      </tr>
+      <tr class='tableRow'>
+        <td id='c1' data-startsquare='' class='td'></td>
+        <td id='c2' data-startsquare='' class='td'></td>
+        <td id='c3' data-startsquare='' class='td'></td>
+        <td id='c4' data-startsquare='' class='td'></td>
+        <td id='c5' data-startsquare='' class='td'></td>
+        <td id='c6' data-startsquare='' class='td'></td>
+        <td id='c7' data-startsquare='' class='td'></td>
+        <td id='c8' data-startsquare='' class='td'></td>
+      </tr>
+      <tr class='tableRow'>
+        <td id='d1' data-startsquare='' class='td'></td>
+        <td id='d2' data-startsquare='' class='td'></td>
+        <td id='d3' data-startsquare='' class='td'></td>
+        <td id='d4' data-startsquare='' class='td'></td>
+        <td id='d5' data-startsquare='' class='td'></td>
+        <td id='d6' data-startsquare='' class='td'></td>
+        <td id='d7' data-startsquare='' class='td'></td>
+        <td id='d8' data-startsquare='' class='td'></td>
+      </tr>
+      <tr class='tableRow'>
+        <td id='e1' data-startsquare='' class='td'></td>
+        <td id='e2' data-startsquare='' class='td'></td>
+        <td id='e3' data-startsquare='' class='td'></td>
+        <td id='e4' data-startsquare='' class='td'></td>
+        <td id='e5' data-startsquare='' class='td'></td>
+        <td id='e6' data-startsquare='' class='td'></td>
+        <td id='e7' data-startsquare='' class='td'></td>
+        <td id='e8' data-startsquare='' class='td'></td>
+      </tr>
+      <tr class='tableRow'>
+        <td id='f1' data-startsquare='' class='td'></td>
+        <td id='f2' data-startsquare='' class='td'></td>
+        <td id='f3' data-startsquare='' class='td'></td>
+        <td id='f4' data-startsquare='' class='td'></td>
+        <td id='f5' data-startsquare='' class='td'></td>
+        <td id='f6' data-startsquare='' class='td'></td>
+        <td id='f7' data-startsquare='' class='td'></td>
+        <td id='f8'data-startsquare=''  class='td'></td>
+      </tr>
+      <tr class='tableRow'>
+        <td id='g1' data-startsquare=''class='td'></td>
+        <td id='g2' data-startsquare=''class='td'></td>
+        <td id='g3' data-startsquare=''class='td'></td>
+        <td id='g4' data-startsquare=''class='td'></td>
+        <td id='g5' data-startsquare=''class='td'></td>
+        <td id='g6' data-startsquare=''class='td'></td>
+        <td id='g7' data-startsquare=''class='td'></td>
+        <td id='g8'data-startsquare='' class='td'></td>
+      </tr>
+      <tr class='tableRow'>
+        <td id='h1'data-startsquare='' class='td'></td>
+        <td id='h2'data-startsquare='' class='td'></td>
+        <td id='h3'data-startsquare='' class='td'></td>
+        <td id='h4'data-startsquare='' class='td'></td>
+        <td id='h5'data-startsquare='' class='td'></td>
+        <td id='h6'data-startsquare='' class='td'></td>
+        <td id='h7'data-startsquare='' class='td'></td>
+        <td id='h8'data-startsquare='' class='td'></td>
+      </tr>
+    </table>
+    <div id='inGamePanel'>
+      <h1 class="subTitle">Stacking <span style="color: lightgreen;">Info</span></h1>
+      <div id='stackingPieceInfo'></div>
+    </div>
+  </div>
+  <script src="chess_functions.js"></script>
+  <script src="white_pawns.js"></script>
+  <script src="black_pawns.js"></script>
+  <script src="knights.js"></script>
+  <script src="bishops.js"></script>
+  <script src="rooks.js"></script>
+  <script src="kings.js"></script>
+  <script src="queens.js"></script>
+  <script src="otherpieces.js"></script>
+  <script src="moves.js"></script>
+  <script src="chess.js"></script>
+  <script src="chessBot.js"></script>
+  <script type="text/javascript">
+    $('#board').innerWidth(function() {return $('#board').innerHeight();});
+    $('#inGamePanel').innerWidth(function() {
+      return document.getElementsByTagName('body')[0].offsetWidth - $('#board').innerWidth() - $('#menuBar').innerWidth() - $('#menuBar').innerWidth() / 30;
+    });
+    document.getElementById('playBtn').addEventListener('click', function() {
+      setUpBoard();
+      setTimeout(function() { addInitialDataSets(); }, 200);
+      moves.whitePawn_stacking = originalMoves.whitePawn_stacking;
+      moves.rook_stacking = originalMoves.rook_stacking;
+      moves.blackPawn_stacking = originalMoves.blackPawn_stacking;
+      moves.queen_stacking = originalMoves.queen_stacking;
+      moves.bishop_stacking = originalMoves.bishop_stacking;
+      moves.knight_stacking = originalMoves.knight_stacking;
+      moves.king_stacking = originalMoves.king_stacking;
+    });
+    document.getElementById('randomBtn').addEventListener('click', function() {
+      setUpBoardRandom();
+      setTimeout(function() { addInitialDataSets(); }, 200);
+      moves.whitePawn_stacking = originalMoves.whitePawn_stacking;
+      moves.rook_stacking = originalMoves.rook_stacking;
+      moves.blackPawn_stacking = originalMoves.blackPawn_stacking;
+      moves.queen_stacking = originalMoves.queen_stacking;
+      moves.bishop_stacking = originalMoves.bishop_stacking;
+      moves.knight_stacking = originalMoves.knight_stacking;
+      moves.king_stacking = originalMoves.king_stacking;
+    });
+  </script>
+</body>
+
+</html>

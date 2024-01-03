@@ -1,0 +1,1646 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+.undefined {
+  background-color: red !important;
+}
+#container {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#inGamePanel {
+  border: 1px solid black;
+  position: absolute;
+  height: 100%;
+  right: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+#stackingPieceInfo {
+  margin: 5%;
+  width: calc(100% - 10%);
+  background: rgba(0, 100, 0, 0.2);
+  border: 1px solid black;
+  height: 200px;
+  border-radius: 10px;
+  color: white;
+}
+.amongs {
+  position: absolute !important;
+  left: calc(50% - 150px);
+  top: calc(50% - 50px);
+  width: 300px;
+  height: 100px;
+  border: 2px solid black;
+  background: lightgreen;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: xx-large;
+  font-weight: 600;
+}
+.amongsBtn {
+  border: 1px solid transparent;
+  background: darkgreen;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+  position: absolute !important;
+  width: 75px;
+  height: 25px;
+  right: 10px;
+  bottom: 10px;
+  cursor: pointer;
+}
+#board {
+  position: absolute;
+  left: 20.5%;
+  height: 98%;
+}
+#boardPuzzle {
+  position: absolute;
+  height: 98%;
+}
+#board td {
+  border: 1px solid black;
+  height: 75px;
+  width: 75px;
+  text-align: center;
+}
+#boardPuzzle td {
+  border: 1px solid black;
+  height: 75px;
+  width: 75px;
+  text-align: center;
+}
+#playBtn {
+  margin: 0% 5% 0% 5%;
+  width: calc(100% - 10%);
+  background: rgba(0, 100, 0, 0.8);
+  border: 1px solid transparent;
+  height: 50px;
+  border-radius: 10px;
+  color: white;
+  font-size: xx-large;
+  font-family: Arial Black,Arial Bold,Gadget,sans-serif; 
+  cursor:pointer;
+}
+#randomBtn {
+  margin: 5% 5% 0% 5%;
+  width: calc(100% - 10%);
+  background: rgba(0, 100, 0, 0.8);
+  border: 1px solid transparent;
+  height: 50px;
+  border-radius: 10px;
+  color: white;
+  font-size: xx-large;
+  font-family: Arial Black,Arial Bold,Gadget,sans-serif; 
+  cursor:pointer;
+}
+#puzzleBtn {
+  margin: 5%;
+  width: calc(100% - 10%);
+  background: rgba(0, 100, 0, 0.8);
+  border: 1px solid transparent;
+  height: 50px;
+  border-radius: 10px;
+  color: white;
+  font-size: xx-large;
+  font-family: Arial Black,Arial Bold,Gadget,sans-serif; 
+  cursor:pointer;
+}
+#loginBtn {
+  margin: 0% 5% 0% 5%;
+  width: calc(100% - 10%);
+  background: #ececd0;
+  border: 1px solid transparent;
+  height: 50px;
+  border-radius: 10px;
+  color: black;
+  font-size: xx-large;
+  font-family: Arial Black,Arial Bold,Gadget,sans-serif; 
+  cursor:pointer;
+}
+.title {
+  text-align: center;
+  font-family: Arial Black,Arial Bold,Gadget,sans-serif; 
+  font-weight: bold;
+  color: green;
+}
+.subTitle {
+  text-align: center;
+  font-family: Arial Black,Arial Bold,Gadget,sans-serif; 
+  font-weight: bold;
+  color: green;
+  font-size: 26px;
+}
+#signinBtn {
+  margin: 5% 5% 5% 5%;
+  width: calc(100% - 10%);
+  background: #779557;
+  border: 1px solid transparent;
+  height: 50px;
+  border-radius: 10px;
+  color: black;
+  font-size: xx-large;
+  font-family: Arial Black,Arial Bold,Gadget,sans-serif; 
+  cursor:pointer;
+}
+.tableRow:nth-child(2n) td:nth-child(2n) {
+  background-color: #779557;
+}
+.tableRow:nth-child(2n + 1) td:nth-child(2n + 1) {
+  background-color: #779557;
+}
+.tableRow:nth-child(2n) td:nth-child(2n + 1) {
+  background-color: #ececd0;
+}
+.tableRow:nth-child(2n + 1) td:nth-child(2n) {
+  background-color: #ececd0;
+}
+#board :nth-child(1n) {
+  position: relative;
+}
+.arrowsContainer {
+  position: absolute !important;
+  width: 30% !important;
+  height: 30% !important;
+  /*border: 1px solid black !important;*/
+  right: 0 !important;
+  top: 0 !important;
+  /*background: rgba(355,355,355,0.5) !important;*/
+}
+.arrowsContainer td {
+  background-color: transparent !important;
+  padding: 0px !important;
+  height: calc(75px/4) !important;
+  width: calc(75px / 2) !important;
+}
+.pieceContainer {
+  position: absolute !important;
+  width: 30% !important;
+  height: 20% !important;
+  /*border: 1px solid black !important;*/
+  left: 0 !important;
+  top: 0 !important;
+  /*background: rgba(355,355,355,0.5) !important;*/
+}
+.pieceContainer td {
+  background-color: transparent !important;
+  padding: 0px !important;
+  height: calc(75px/4) !important;
+  width: calc(75px / 2) !important;
+}
+#expandPieceStack {
+  margin: 5%;
+  width: calc(100% - 10%);
+  background: rgba(0, 100, 0, 0.2);
+  border: 1px solid black;
+  height: 200px;
+  border-radius: 10px;
+  color: white;
+  cursor:pointer;
+}
+.dematerialized {
+  opacity: 50%;
+}
+img {
+  height: 50px;
+}
+.dotted {
+  background-color: rgb(0, 95, 25);
+}
+#menuBar {
+  position: absolute;
+  height: 100%;
+  width: 20%;
+  border: 1px solid black;
+  background: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+}
+
+/* ------------------------- SYMBOLS ------------------------- */
+
+.a_f1 {
+  background: url('symbols/a1.png');
+  background-size: cover;
+}
+.a_l1-r1 {
+  background: url('symbols/al1r1.png');
+  background-size: cover;
+}
+.m_f1 {
+  background: url('symbols/m1.png');
+  background-size: cover;
+}
+.m_f2 {
+  background: url('symbols/m2.png');
+  background-size: cover;
+}
+.m_f3 {
+  background: url('symbols/m3.png');
+  background-size: cover;
+}
+
+/* ------------------------- PIECES ------------------------- */
+
+.whitePawn {
+  background: url('img/wpawn.png');
+  background-size: cover;
+}
+.whiteKnight {
+  background: url('img/wknight.png');
+  background-size: cover;
+}
+.whiteRook {
+  background: url('img/wrook.png');
+  background-size: cover;
+}
+.whiteKing {
+  background: url('img/wking.png');
+  background-size: cover;
+}
+.whiteQueen {
+  background: url('img/wqueen.png');
+  background-size: cover;
+}
+.whiteBishop {
+  background: url('img/wbishop.png');
+  background-size: cover;
+}
+.blackPawn {
+  background: url('img/bpawn.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackKnight {
+  background: url('img/bknight.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackRook {
+  background: url('img/brook.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackKing {
+  background: url('img/bking.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackQueen {
+  background: url('img/bqueen.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackBishop {
+  background: url('img/bbishop.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteSuperpawn {
+  background: url('img/wpawn.png');
+  background-size: cover;
+  transform: rotate(-90deg);
+}
+.blackSuperpawn {
+  background: url('img/bpawn.png');
+  background-size: cover;
+  transform: rotate(270deg);
+}
+.blackMan {
+  background: url('img/set_old/bman.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteMan {
+  background: url('img/set_old/wman.png');
+  background-size: cover;
+}
+.blackElephant {
+  background: url('img/set_old/belephant.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteElephant {
+  background: url('img/set_old/welephant.png');
+  background-size: cover;
+}
+.blackMinister {
+  background: url('img/set_old/bminister.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteMinister {
+  background: url('img/set_old/wminister.png');
+  background-size: cover;
+}
+.blackPrincess {
+  background: url('img/set_old/bprincess.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePrincess {
+  background: url('img/set_old/wprincess.png');
+  background-size: cover;
+}
+.blackEmpress {
+  background: url('img/set_old/bempress.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteEmpress {
+  background: url('img/set_old/wempress.png');
+  background-size: cover;
+}
+.blackAmazon {
+  background: url('img/set_old/bamazon.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteAmazon {
+  background: url('img/set_old/wamazon.png');
+  background-size: cover;
+}
+.white_litePawn {
+  background: url('img/set_lite/wpawn.png');
+  background-size: cover;
+}
+.black_litePawn {
+  background: url('img/set_lite/bpawn.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.white_liteRook {
+  background: url('img/set_lite/wrook.png');
+  background-size: cover;
+}
+.black_liteRook {
+  background: url('img/set_lite/brook.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.white_liteBishop {
+  background: url('img/set_lite/wbishop.png');
+  background-size: cover;
+}
+.black_liteBishop {
+  background: url('img/set_lite/bbishop.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.white_liteKnight {
+  background: url('img/set_lite/wknight.png');
+  background-size: cover;
+}
+.black_liteKnight {
+  background: url('img/set_lite/bknight.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.white_liteQueen {
+  background: url('img/set_lite/wqueen.png');
+  background-size: cover;
+}
+.black_liteQueen {
+  background: url('img/set_lite/bqueen.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.white_liteKing {
+  background: url('img/set_lite/wking.png');
+  background-size: cover;
+}
+.black_liteKing {
+  background: url('img/set_lite/bking.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteReverseMinister {
+  background: url('img/misc/wreverseminister.png');
+  background-size: cover;
+}
+.blackReverseMinister {
+  background: url('img/misc/breverseminister.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.white_superBishop {
+  background: url('img/set_super/wbishop.png');
+  background-size: cover;
+}
+.black_superBishop {
+  background: url('img/set_super/bbishop.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.white_superRook {
+  background: url('img/set_super/wrook.png');
+  background-size: cover;
+}
+.black_superRook {
+  background: url('img/set_super/brook.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.white_superKing {
+  background: url('img/set_super/wking.png');
+  background-size: cover;
+}
+.black_superKing {
+  background: url('img/set_super/bking.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.white_superKnight {
+  background: url('img/set_super/wknight.png');
+  background-size: cover;
+}
+.black_superKnight {
+  background: url('img/set_super/bknight.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteLongKnight {
+  background: url('img/misc/wlongknight.png');
+  background-size: cover;
+}
+.blackLongKnight {
+  background: url('img/misc/blongknight.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteFastKing {
+  background: url('img/misc/wfastking.png');
+  background-size: cover;
+}
+.blackFastKing {
+  background: url('img/misc/bfastking.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteHyperFastKing {
+  background: url('img/misc/whyperfastking.png');
+  background-size: cover;
+}
+.blackHyperFastKing {
+  background: url('img/misc/bhyperfastking.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_mf1_al1r1f1 {
+  background: url('img/pawns/w_mf1_al1-r1-f1.png');
+  background-size: cover;
+}
+.blackPawn_mf1_al1r1f1 {
+  background: url('img/pawns/b_mf1_al1-r1-f1.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteFivePawn {
+  background: url('img/pawns/w_fivepawn.png');
+  background-size: cover;
+}
+.blackFivePawn {
+  background: url('img/pawns/b_fivepawn.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_mf1_af1 {
+  background: url('img/pawns/w_mf1_af1.png');
+  background-size: cover;
+}
+.blackPawn_mf1_af1 {
+  background: url('img/pawns/b_mf1_af1.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_mf1_aal1ar1 {
+  background: url('img/pawns/w_mf1_aal1-ar1.png');
+  background-size: cover;
+}
+.blackPawn_mf1_aal1ar1 {
+  background: url('img/pawns/b_mf1_aal1-ar1.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+/* Made since split */
+.whitePawn_mf1_adbl1dbr1 {
+  background: url('img/pawns/whitePawn_mf1_adbl1dbr1.png');
+  background-size: cover;
+}
+.blackPawn_mf1_adbl1dbr1 {
+  background: url('img/pawns/blackPawn_mf1_adbl1dbr1.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_mf1_al1r1dl1dr1 {
+  background: url('img/pawns/whitePawn_mf1_al1r1dl1dr1.png');
+  background-size: cover;
+}
+.blackPawn_mf1_al1r1dl1dr1 {
+  background: url('img/pawns/blackPawn_mf1_al1r1dl1dr1.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteOctoPawn {
+  background: url('img/pawns/whiteOctoPawn.png');
+  background-size: cover;
+}
+.blackOctoPawn {
+  background: url('img/pawns/blackOctoPawn.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_mf1_af1dl1dr1 {
+  background: url('img/pawns/whitePawn_mf1_af1dl1dr1.png');
+  background-size: cover;
+}
+.blackPawn_mf1_af1dl1dr1 {
+  background: url('img/pawns/blackPawn_mf1_af1dl1dr1.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_mf1_af1b1al1ar1 {
+  background: url('img/pawns/whitePawn_mf1_af1b1al1ar1.png');
+  background-size: cover;
+}
+.blackPawn_mf1_af1b1al1ar1 {
+  background: url('img/pawns/blackPawn_mf1_af1b1al1ar1.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_mf1_nfaal1ar1 {
+  background: url('img/pawns/whitePawn_mf1_aal1ar1.png');
+  background-size: cover;
+}
+.blackPawn_mf1_nfaal1ar1 {
+  background: url('img/pawns/blackPawn_mf1_aal1ar1.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_mf2_al1r1 {
+  background: url('img/pawns/whitePawn_mf2_al1r1.png');
+  background-size: cover;
+}
+.blackPawn_mf2_al1r1 {
+  background: url('img/pawns/blackPawn_mf2_al1r1.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_mf2 {
+  background: url('img/pawns/whitePawn_mf2.png');
+  background-size: cover;
+}
+.blackPawn_mf2 {
+  background: url('img/pawns/blackPawn_mf2.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_mf3 {
+  background: url('img/pawns/whitePawn_mf3.png');
+  background-size: cover;
+}
+.blackPawn_mf3 {
+  background: url('img/pawns/blackPawn_mf3.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_mf2_af1 {
+  background: url('img/pawns/whitePawn_mf2_af1.png');
+  background-size: cover;
+}
+.blackPawn_mf2_af1 {
+  background: url('img/pawns/blackPawn_mf2_af1.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteQueen_atomic {
+  background: url('img/set_atomic/whiteQueen_atomic.png');
+  background-size: cover;
+}
+.blackQueen_atomic {
+  background: url('img/set_atomic/blackQueen_atomic.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteKnight_atomic {
+  background: url('img/set_atomic/whiteKnight_atomic.png');
+  background-size: cover;
+}
+.blackKnight_atomic {
+  background: url('img/set_atomic/blackKnight_atomic.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteKing_atomic {
+  background: url('img/set_atomic/whiteKing_atomic.png');
+  background-size: cover;
+}
+.blackKing_atomic {
+  background: url('img/set_atomic/blackKing_atomic.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteRook_atomic {
+  background: url('img/set_atomic/whiteRook_atomic.png');
+  background-size: cover;
+}
+.blackRook_atomic {
+  background: url('img/set_atomic/blackRook_atomic.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteBishop_atomic {
+  background: url('img/set_atomic/whiteBishop_atomic.png');
+  background-size: cover;
+}
+.blackBishop_atomic {
+  background: url('img/set_atomic/blackBishop_atomic.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_atomic {
+  background: url('img/set_atomic/whitePawn_atomic.png');
+  background-size: cover;
+}
+.blackPawn_atomic {
+  background: url('img/set_atomic/blackPawn_atomic.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteQueen_ghoul {
+  background: url('img/set_ghoul/whiteQueen_ghoul.png');
+  background-size: cover;
+}
+.blackQueen_ghoul {
+  background: url('img/set_ghoul/blackQueen_ghoul.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteKnight_ghoul {
+  background: url('img/set_ghoul/whiteKnight_ghoul.png');
+  background-size: cover;
+}
+.blackKnight_ghoul {
+  background: url('img/set_ghoul/blackKnight_ghoul.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteKing_ghoul {
+  background: url('img/set_ghoul/whiteKing_ghoul.png');
+  background-size: cover;
+}
+.blackKing_ghoul {
+  background: url('img/set_ghoul/blackKing_ghoul.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteRook_ghoul {
+  background: url('img/set_ghoul/whiteRook_ghoul.png');
+  background-size: cover;
+}
+.blackRook_ghoul {
+  background: url('img/set_ghoul/blackRook_ghoul.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteBishop_ghoul {
+  background: url('img/set_ghoul/whiteBishop_ghoul.png');
+  background-size: cover;
+}
+.blackBishop_ghoul {
+  background: url('img/set_ghoul/blackBishop_ghoul.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_ghoul {
+  background: url('img/set_ghoul/whitePawn_ghoul.png');
+  background-size: cover;
+}
+.blackPawn_ghoul {
+  background: url('img/set_ghoul/blackPawn_ghoul.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteQueen_ghost {
+  background: url('img/set_ghost/whiteQueen_ghost.png');
+  background-size: cover;
+}
+.blackQueen_ghost {
+  background: url('img/set_ghost/blackQueen_ghost.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteKnight_ghost {
+  background: url('img/set_ghost/whiteKnight_ghost.png');
+  background-size: cover;
+}
+.blackKnight_ghost {
+  background: url('img/set_ghost/blackKnight_ghost.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteKing_ghost {
+  background: url('img/set_ghost/whiteKing_ghost.png');
+  background-size: cover;
+}
+.blackKing_ghost {
+  background: url('img/set_ghost/blackKing_ghost.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteRook_ghost {
+  background: url('img/set_ghost/whiteRook_ghost.png');
+  background-size: cover;
+}
+.blackRook_ghost {
+  background: url('img/set_ghost/blackRook_ghost.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteBishop_ghost {
+  background: url('img/set_ghost/whiteBishop_ghost.png');
+  background-size: cover;
+}
+.blackBishop_ghost {
+  background: url('img/set_ghost/blackBishop_ghost.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_ghost {
+  background: url('img/set_ghost/whitePawn_ghost.png');
+  background-size: cover;
+}
+.blackPawn_ghost {
+  background: url('img/set_ghost/blackPawn_ghost.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteQueen_murderous {
+  background: url('img/set_murderous/whiteQueen_murderous.png');
+  background-size: cover;
+}
+.blackQueen_murderous {
+  background: url('img/set_murderous/blackQueen_murderous.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteKnight_murderous {
+  background: url('img/set_murderous/whiteKnight_murderous.png');
+  background-size: cover;
+}
+.blackKnight_murderous {
+  background: url('img/set_murderous/blackKnight_murderous.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteKing_murderous {
+  background: url('img/set_murderous/whiteKing_murderous.png');
+  background-size: cover;
+}
+.blackKing_murderous {
+  background: url('img/set_murderous/blackKing_murderous.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteRook_murderous {
+  background: url('img/set_murderous/whiteRook_murderous.png');
+  background-size: cover;
+}
+.blackRook_murderous {
+  background: url('img/set_murderous/blackRook_murderous.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteBishop_murderous {
+  background: url('img/set_murderous/whiteBishop_murderous.png');
+  background-size: cover;
+}
+.blackBishop_murderous {
+  background: url('img/set_murderous/blackBishop_murderous.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_murderous {
+  background: url('img/set_murderous/whitePawn_murderous.png');
+  background-size: cover;
+}
+.blackPawn_murderous {
+  background: url('img/set_murderous/blackPawn_murderous.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteSinisterMinister {
+  background: url('img/misc/whiteSinisterMinister.png');
+  background-size: cover;
+}
+.blackSinisterMinister {
+  background: url('img/misc/blackSinisterMinister.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteRoyalKnight {
+  background: url('img/misc/whiteRoyalKnight.png');
+  background-size: cover;
+}
+.blackRoyalKnight {
+  background: url('img/misc/blackRoyalKnight.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteSlidingKing {
+  background: url('img/misc/whiteSlidingKing.png');
+  background-size: cover;
+}
+.blackSlidingKing {
+  background: url('img/misc/blackSlidingKing.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteCamel_knight {
+  background: url('img/misc/whiteCamel_knight.png');
+  background-size: cover;
+}
+.blackCamel_knight {
+  background: url('img/misc/blackCamel_knight.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteColorChangingBishop {
+  background: url('img/misc/whiteColorChangingBishop.png');
+  background-size: cover;
+}
+.blackColorChangingBishop {
+  background: url('img/misc/blackColorChangingBishop.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteDisabledKnight {
+  background: url('img/misc/whiteDisabledKnight.png');
+  background-size: cover;
+}
+.blackDisabledKnight {
+  background: url('img/misc/blackDisabledKnight.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteSpiderKnight {
+  background: url('img/misc/whiteSpiderKnight.png');
+  background-size: cover;
+}
+.blackSpiderKnight {
+  background: url('img/misc/blackSpiderKnight.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.white3Elephant {
+  background: url('img/misc/white3Elephant.png');
+  background-size: cover;
+}
+.black3Elephant {
+  background: url('img/misc/black3Elephant.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_mf4 {
+  background: url('img/pawns/whitePawn_mf4.png');
+  background-size: cover;
+}
+.blackPawn_mf4 {
+  background: url('img/pawns/blackPawn_mf4.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_mf2_af1l1r1 {
+  background: url('img/pawns/whitePawn_mf2_af1l1r1.png');
+  background-size: cover;
+}
+.blackPawn_mf2_af1l1r1 {
+  background: url('img/pawns/blackPawn_mf2_af1l1r1.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_mf2_af1al1ar1b1 {
+  background: url('img/pawns/whitePawn_mf2_af1al1ar1b1.png');
+  background-size: cover;
+}
+.blackPawn_mf2_af1al1ar1b1 {
+  background: url('img/pawns/blackPawn_mf2_af1al1ar1b1.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_mf3_af1 {
+  background: url('img/pawns/whitePawn_mf3_af1.png');
+  background-size: cover;
+}
+.blackPawn_mf3_af1 {
+  background: url('img/pawns/blackPawn_mf3_af1.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_af1l1r1 {
+  background: url('img/pawns/whitePawn_af1l1r1.png');
+  background-size: cover;
+}
+.blackPawn_af1l1r1 {
+  background: url('img/pawns/blackPawn_af1l1r1.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteOctapawnLite {
+  background: url('img/pawns/whiteOctapawnLite.png');
+  background-size: cover;
+}
+.blackOctapawnLite {
+  background: url('img/pawns/blackOctapawnLite.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteQueen_defuser {
+  background: url('img/set_defuser/whiteQueen_defuser.png');
+  background-size: cover;
+}
+.blackQueen_defuser {
+  background: url('img/set_defuser/blackQueen_defuser.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteKnight_defuser {
+  background: url('img/set_defuser/whiteKnight_defuser.png');
+  background-size: cover;
+}
+.blackKnight_defuser {
+  background: url('img/set_defuser/blackKnight_defuser.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteKing_defuser {
+  background: url('img/set_defuser/whiteKing_defuser.png');
+  background-size: cover;
+}
+.blackKing_defuser {
+  background: url('img/set_defuser/blackKing_defuser.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteRook_defuser {
+  background: url('img/set_defuser/whiteRook_defuser.png');
+  background-size: cover;
+}
+.blackRook_defuser {
+  background: url('img/set_defuser/blackRook_defuser.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteBishop_defuser {
+  background: url('img/set_defuser/whiteBishop_defuser.png');
+  background-size: cover;
+}
+.blackBishop_defuser {
+  background: url('img/set_defuser/blackBishop_defuser.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_defuser {
+  background: url('img/set_defuser/whitePawn_defuser.png');
+  background-size: cover;
+}
+.blackPawn_defuser {
+  background: url('img/set_defuser/blackPawn_defuser.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteQueen_reverseAtomic {
+  background: url('img/set_reverseAtomic/whiteQueen_reverseAtomic.png');
+  background-size: cover;
+}
+.blackQueen_reverseAtomic {
+  background: url('img/set_reverseAtomic/blackQueen_reverseAtomic.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteKnight_reverseAtomic {
+  background: url('img/set_reverseAtomic/whiteKnight_reverseAtomic.png');
+  background-size: cover;
+}
+.blackKnight_reverseAtomic {
+  background: url('img/set_reverseAtomic/blackKnight_reverseAtomic.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteKing_reverseAtomic {
+  background: url('img/set_reverseAtomic/whiteKing_reverseAtomic.png');
+  background-size: cover;
+}
+.blackKing_reverseAtomic {
+  background: url('img/set_reverseAtomic/blackKing_reverseAtomic.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteRook_reverseAtomic {
+  background: url('img/set_reverseAtomic/whiteRook_reverseAtomic.png');
+  background-size: cover;
+}
+.blackRook_reverseAtomic {
+  background: url('img/set_reverseAtomic/blackRook_reverseAtomic.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteBishop_reverseAtomic {
+  background: url('img/set_reverseAtomic/whiteBishop_reverseAtomic.png');
+  background-size: cover;
+}
+.blackBishop_reverseAtomic {
+  background: url('img/set_reverseAtomic/blackBishop_reverseAtomic.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_reverseAtomic {
+  background: url('img/set_reverseAtomic/whitePawn_reverseAtomic.png');
+  background-size: cover;
+}
+.blackPawn_reverseAtomic {
+  background: url('img/set_reverseAtomic/blackPawn_reverseAtomic.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_mf1f2_al1r1 {
+  background: url('img/pawns/whitePawn_mf1f2_al1r1.png');
+  background-size: cover;
+}
+.blackPawn_mf1f2_al1r1 {
+  background: url('img/pawns/blackPawn_mf1f2_al1r1.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_mf1f2_af1l1r1 {
+  background: url('img/pawns/whitePawn_mf1f2_af1l1r1.png');
+  background-size: cover;
+}
+.blackPawn_mf1f2_af1l1r1 {
+  background: url('img/pawns/blackPawn_mf1f2_af1l1r1.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_mf1f2_af1l1r1al1ar1 {
+  background: url('img/pawns/whitePawn_mf1f2_af1l1r1al1ar1.png');
+  background-size: cover;
+}
+.blackPawn_mf1f2_af1l1r1al1ar1 {
+  background: url('img/pawns/blackPawn_mf1f2_af1l1r1al1ar1.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_mf1f2_al1r1al1ar1 {
+  background: url('img/pawns/whitePawn_mf1f2_al1r1al1ar1.png');
+  background-size: cover;
+}
+.blackPawn_mf1f2_al1r1al1ar1 {
+  background: url('img/pawns/blackPawn_mf1f2_al1r1al1ar1.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_mf1f2_al1r1dbl1dbr1 {
+  background: url('img/pawns/whitePawn_mf1f2_al1r1dbl1dbr1.png');
+  background-size: cover;
+}
+.blackPawn_mf1f2_al1r1dbl1dbr1 {
+  background: url('img/pawns/blackPawn_mf1f2_al1r1dbl1dbr1.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_mf1f2_adb1dbl1dbr1 {
+  background: url('img/pawns/whitePawn_mf1f2_adb1dbl1dbr1.png');
+  background-size: cover;
+}
+.blackPawn_mf1f2_adb1dbl1dbr1 {
+  background: url('img/pawns/blackPawn_mf1f2_adb1dbl1dbr1.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_mf1f2f3_al1r1 {
+  background: url('img/pawns/whitePawn_mf1f2f3_al1r1.png');
+  background-size: cover;
+}
+.blackPawn_mf1f2f3_al1r1 {
+  background: url('img/pawns/blackPawn_mf1f2f3_al1r1.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteQueen_phantom {
+  background: url('img/set_phantom/whiteQueen_phantom.png');
+  background-size: cover;
+}
+.blackQueen_phantom {
+  background: url('img/set_phantom/blackQueen_phantom.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteKnight_phantom {
+  background: url('img/set_phantom/whiteKnight_phantom.png');
+  background-size: cover;
+}
+.blackKnight_phantom {
+  background: url('img/set_phantom/blackKnight_phantom.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteKing_phantom {
+  background: url('img/set_phantom/whiteKing_phantom.png');
+  background-size: cover;
+}
+.blackKing_phantom {
+  background: url('img/set_phantom/blackKing_phantom.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteRook_phantom {
+  background: url('img/set_phantom/whiteRook_phantom.png');
+  background-size: cover;
+}
+.blackRook_phantom {
+  background: url('img/set_phantom/blackRook_phantom.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteBishop_phantom {
+  background: url('img/set_phantom/whiteBishop_phantom.png');
+  background-size: cover;
+}
+.blackBishop_phantom {
+  background: url('img/set_phantom/blackBishop_phantom.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_phantom {
+  background: url('img/set_phantom/whitePawn_phantom.png');
+  background-size: cover;
+}
+.blackPawn_phantom {
+  background: url('img/set_phantom/blackPawn_phantom.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_crowding {
+  background: url('img/set_crowding/whitePawn_crowding.png');
+  background-size: cover;
+}
+.whiteKnight_crowding {
+  background: url('img/set_crowding/whiteKnight_crowding.png');
+  background-size: cover;
+}
+.whiteRook_crowding {
+  background: url('img/set_crowding/whiteRook_crowding.png');
+  background-size: cover;
+}
+.whiteKing_crowding {
+  background: url('img/set_crowding/whiteKing_crowding.png');
+  background-size: cover;
+}
+.whiteQueen_crowding {
+  background: url('img/set_crowding/whiteQueen_crowding.png');
+  background-size: cover;
+}
+.whiteBishop_crowding {
+  background: url('img/set_crowding/whiteBishop_crowding.png');
+  background-size: cover;
+}
+.blackPawn_crowding {
+  background: url('img/set_crowding/blackPawn_crowding.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackKnight_crowding {
+  background: url('img/set_crowding/blackKnight_crowding.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackRook_crowding {
+  background: url('img/set_crowding/blackRook_crowding.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackKing_crowding {
+  background: url('img/set_crowding/blackKing_crowding.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackQueen_crowding {
+  background: url('img/set_crowding/blackQueen_crowding.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackBishop_crowding {
+  background: url('img/set_crowding/blackBishop_crowding.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_stacking {
+  background: url('img/set_stacking/whitePawn_stacking.png');
+  background-size: cover;
+}
+.whiteKnight_stacking {
+  background: url('img/set_stacking/whiteKnight_stacking.png');
+  background-size: cover;
+}
+.whiteRook_stacking {
+  background: url('img/set_stacking/whiteRook_stacking.png');
+  background-size: cover;
+}
+.whiteKing_stacking {
+  background: url('img/set_stacking/whiteKing_stacking.png');
+  background-size: cover;
+}
+.whiteQueen_stacking {
+  background: url('img/set_stacking/whiteQueen_stacking.png');
+  background-size: cover;
+}
+.whiteBishop_stacking {
+  background: url('img/set_stacking/whiteBishop_stacking.png');
+  background-size: cover;
+}
+.blackPawn_stacking {
+  background: url('img/set_stacking/blackPawn_stacking.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackKnight_stacking {
+  background: url('img/set_stacking/blackKnight_stacking.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackRook_stacking {
+  background: url('img/set_stacking/blackRook_stacking.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackKing_stacking {
+  background: url('img/set_stacking/blackKing_stacking.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackQueen_stacking {
+  background: url('img/set_stacking/blackQueen_stacking.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackBishop_stacking {
+  background: url('img/set_stacking/blackBishop_stacking.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_mf1_al1r1al1ar1 {
+  background: url('img/pawns/whitePawn_mf1_al1r1al1ar1.png');
+  background-size: cover;
+}
+.blackPawn_mf1_al1r1al1ar1 {
+  background: url('img/pawns/blackPawn_mf1_al1r1al1ar1.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_mf1_af1al1ar1dl1dr1 {
+  background: url('img/pawns/whitePawn_mf1_af1al1ar1dl1dr1.png');
+  background-size: cover;
+}
+.blackPawn_mf1_af1al1ar1dl1dr1 {
+  background: url('img/pawns/blackPawn_mf1_af1al1ar1dl1dr1.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteKnight_promotion {
+  background: url('img/set_promotion/whiteKnight_promotion.png');
+  background-size: cover;
+}
+.whiteRook_promotion {
+  background: url('img/set_promotion/whiteRook_promotion.png');
+  background-size: cover;
+}
+.whiteQueen_promotion {
+  background: url('img/set_promotion/whiteQueen_promotion.png');
+  background-size: cover;
+}
+.whiteBishop_promotion {
+  background: url('img/set_promotion/whiteBishop_promotion.png');
+  background-size: cover;
+}
+.blackKnight_promotion {
+  background: url('img/set_promotion/blackKnight_promotion.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackRook_promotion {
+  background: url('img/set_promotion/blackRook_promotion.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackQueen_promotion {
+  background: url('img/set_promotion/blackQueen_promotion.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackBishop_promotion {
+  background: url('img/set_promotion/blackBishop_promotion.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_infinite {
+  background: url('img/set_infinite/whitePawn_infinite.png');
+  background-size: cover;
+}
+.whiteKnight_infinite {
+  background: url('img/set_infinite/whiteKnight_infinite.png');
+  background-size: cover;
+}
+.whiteRook_infinite {
+  background: url('img/set_infinite/whiteRook_infinite.png');
+  background-size: cover;
+}
+.whiteQueen_infinite {
+  background: url('img/set_infinite/whiteQueen_infinite.png');
+  background-size: cover;
+}
+.whiteBishop_infinite {
+  background: url('img/set_infinite/whiteBishop_infinite.png');
+  background-size: cover;
+}
+.blackPawn_infinite {
+  background: url('img/set_infinite/blackPawn_infinite.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackKnight_infinite {
+  background: url('img/set_infinite/blackKnight_infinite.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackRook_infinite {
+  background: url('img/set_infinite/blackRook_infinite.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackQueen_infinite {
+  background: url('img/set_infinite/blackQueen_infinite.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackBishop_infinite {
+  background: url('img/set_infinite/blackBishop_infinite.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_capturetheflag {
+  background: url('img/set_capturetheflag/whitePawn_capturetheflag.png');
+  background-size: cover;
+}
+.whiteKnight_capturetheflag {
+  background: url('img/set_capturetheflag/whiteKnight_capturetheflag.png');
+  background-size: cover;
+}
+.whiteRook_capturetheflag {
+  background: url('img/set_capturetheflag/whiteRook_capturetheflag.png');
+  background-size: cover;
+}
+.whiteQueen_capturetheflag {
+  background: url('img/set_capturetheflag/whiteQueen_capturetheflag.png');
+  background-size: cover;
+}
+.whiteBishop_capturetheflag {
+  background: url('img/set_capturetheflag/whiteBishop_capturetheflag.png');
+  background-size: cover;
+}
+.blackPawn_capturetheflag {
+  background: url('img/set_capturetheflag/blackPawn_capturetheflag.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackKnight_capturetheflag {
+  background: url('img/set_capturetheflag/blackKnight_capturetheflag.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackRook_capturetheflag {
+  background: url('img/set_capturetheflag/blackRook_capturetheflag.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackQueen_capturetheflag {
+  background: url('img/set_capturetheflag/blackQueen_capturetheflag.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackBishop_capturetheflag {
+  background: url('img/set_capturetheflag/blackBishop_capturetheflag.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_duplicate {
+  background: url('img/set_duplicate/whitePawn_duplicate.png');
+  background-size: cover;
+}
+.whiteKnight_duplicate {
+  background: url('img/set_duplicate/whiteKnight_duplicate.png');
+  background-size: cover;
+}
+.whiteRook_duplicate {
+  background: url('img/set_duplicate/whiteRook_duplicate.png');
+  background-size: cover;
+}
+.whiteBishop_duplicate {
+  background: url('img/set_duplicate/whiteBishop_duplicate.png');
+  background-size: cover;
+}
+.blackPawn_duplicate {
+  background: url('img/set_duplicate/blackPawn_duplicate.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackKnight_duplicate {
+  background: url('img/set_duplicate/blackKnight_duplicate.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackRook_duplicate {
+  background: url('img/set_duplicate/blackRook_duplicate.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackBishop_duplicate {
+  background: url('img/set_duplicate/blackBishop_duplicate.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_cloning {
+  background: url('img/set_cloning/whitePawn_cloning.png');
+  background-size: cover;
+}
+.whiteKnight_cloning {
+  background: url('img/set_cloning/whiteKnight_cloning.png');
+  background-size: cover;
+}
+.whiteRook_cloning {
+  background: url('img/set_cloning/whiteRook_cloning.png');
+  background-size: cover;
+}
+.whiteBishop_cloning {
+  background: url('img/set_cloning/whiteBishop_cloning.png');
+  background-size: cover;
+}
+.blackPawn_cloning {
+  background: url('img/set_cloning/blackPawn_cloning.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackKnight_cloning {
+  background: url('img/set_cloning/blackKnight_cloning.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackRook_cloning {
+  background: url('img/set_cloning/blackRook_cloning.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.blackBishop_cloning {
+  background: url('img/set_cloning/blackBishop_cloning.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteQueen_onemove {
+  background: url('img/set_onemove/whiteQueen_onemove.png');
+  background-size: cover;
+}
+.blackQueen_onemove {
+  background: url('img/set_onemove/blackQueen_onemove.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteKnight_onemove {
+  background: url('img/set_onemove/whiteKnight_onemove.png');
+  background-size: cover;
+}
+.blackKnight_onemove {
+  background: url('img/set_onemove/blackKnight_onemove.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteKing_onemove {
+  background: url('img/set_onemove/whiteKing_onemove.png');
+  background-size: cover;
+}
+.blackKing_onemove {
+  background: url('img/set_onemove/blackKing_onemove.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteRook_onemove {
+  background: url('img/set_onemove/whiteRook_onemove.png');
+  background-size: cover;
+}
+.blackRook_onemove {
+  background: url('img/set_onemove/blackRook_onemove.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteBishop_onemove {
+  background: url('img/set_onemove/whiteBishop_onemove.png');
+  background-size: cover;
+}
+.blackBishop_onemove {
+  background: url('img/set_onemove/blackBishop_onemove.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_onemove {
+  background: url('img/set_onemove/whitePawn_onemove.png');
+  background-size: cover;
+}
+.blackPawn_onemove {
+  background: url('img/set_onemove/blackPawn_onemove.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteblackQueen_shared {
+  background: url('img/set_shared/whiteblackQueen_shared.png');
+  background-size: cover;
+}
+.whiteblackKnight_shared {
+  background: url('img/set_shared/whiteblackKnight_shared.png');
+  background-size: cover;
+}
+.whiteblackRook_shared {
+  background: url('img/set_shared/whiteblackRook_shared.png');
+  background-size: cover;
+}
+.whiteblackBishop_shared {
+  background: url('img/set_shared/whiteblackBishop_shared.png');
+  background-size: cover;
+}
+.whiteblackPawn_shared {
+  background: url('img/set_shared/whiteblackPawn_shared.png');
+  background-size: cover;
+}
+.blackwhitePawn_shared {
+  background: url('img/set_shared/blackwhitePawn_shared.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteQueen_fragile {
+  background: url('img/set_fragile/whiteQueen_fragile.png');
+  background-size: cover;
+}
+.blackQueen_fragile {
+  background: url('img/set_fragile/blackQueen_fragile.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteKnight_fragile {
+  background: url('img/set_fragile/whiteKnight_fragile.png');
+  background-size: cover;
+}
+.blackKnight_fragile {
+  background: url('img/set_fragile/blackKnight_fragile.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteKing_fragile {
+  background: url('img/set_fragile/whiteKing_fragile.png');
+  background-size: cover;
+}
+.blackKing_fragile {
+  background: url('img/set_fragile/blackKing_fragile.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteRook_fragile {
+  background: url('img/set_fragile/whiteRook_fragile.png');
+  background-size: cover;
+}
+.blackRook_fragile {
+  background: url('img/set_fragile/blackRook_fragile.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whiteBishop_fragile {
+  background: url('img/set_fragile/whiteBishop_fragile.png');
+  background-size: cover;
+}
+.blackBishop_fragile {
+  background: url('img/set_fragile/blackBishop_fragile.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
+.whitePawn_fragile {
+  background: url('img/set_fragile/whitePawn_fragile.png');
+  background-size: cover;
+}
+.blackPawn_fragile {
+  background: url('img/set_fragile/blackPawn_fragile.png');
+  background-size: cover;
+  transform: rotate(180deg);
+}
